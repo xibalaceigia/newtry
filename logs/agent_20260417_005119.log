@@ -1,0 +1,6 @@
+2026-04-17 00:51:19,544 - agent - ERROR - vector_store.py:100 - 文件C:\Users\dell\Desktop\agent项目\data\扫地机器人100问.pdf处理失败: `pypdf` package not found, please install it with `pip install pypdf`, exc_info = True
+2026-04-17 00:51:36,570 - agent - INFO - vector_store.py:97 - 文件C:\Users\dell\Desktop\agent项目\data\扫地机器人100问2.txt加载成功，处理完成
+2026-04-17 00:52:41,305 - agent - INFO - vector_store.py:97 - 文件C:\Users\dell\Desktop\agent项目\data\扫拖一体机器人100问.txt加载成功，处理完成
+2026-04-17 00:52:49,817 - agent - INFO - vector_store.py:97 - 文件C:\Users\dell\Desktop\agent项目\data\故障排除.txt加载成功，处理完成
+2026-04-17 00:52:52,451 - agent - INFO - vector_store.py:97 - 文件C:\Users\dell\Desktop\agent项目\data\维护保养.txt加载成功，处理完成
+2026-04-17 00:52:52,458 - agent - WARNING - vector_store.py:92 - 文件C:\Users\dell\Desktop\agent项目\data\选购指南.txt分片后没有有效内容，跳过

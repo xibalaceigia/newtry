@@ -1,0 +1,52 @@
+2026-04-19 00:03:08,095 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有1条消息
+2026-04-19 00:03:08,095 - agent - DEBUG - middleware.py:38 - [log_before_model]HumanMessage | 在我的城市当前天气下，如何保养扫地机器人？
+2026-04-19 00:03:11,591 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: get_user_loction
+2026-04-19 00:03:11,591 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {}
+2026-04-19 00:03:11,591 - agent - INFO - middleware.py:22 - [tool monitor] 工具get_user_loction执行成功
+2026-04-19 00:03:11,625 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有3条消息
+2026-04-19 00:03:11,626 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 北京
+2026-04-19 00:03:15,098 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: get_weather
+2026-04-19 00:03:15,098 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {'city': '北京'}
+2026-04-19 00:03:15,099 - agent - INFO - middleware.py:22 - [tool monitor] 工具get_weather执行成功
+2026-04-19 00:03:15,363 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有5条消息
+2026-04-19 00:03:15,363 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 城市北京的天气是晴天，温度是20度，湿度是50%
+2026-04-19 00:03:19,147 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: rag_summarize
+2026-04-19 00:03:19,147 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {'query': '晴天 20度 50%湿度 扫地机器人保养'}
+2026-04-19 00:03:22,780 - agent - INFO - middleware.py:22 - [tool monitor] 工具rag_summarize执行成功
+2026-04-19 00:03:24,068 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有7条消息
+2026-04-19 00:03:24,068 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 晴天、20度、50%湿度环境下，扫地机器人保养应遵循：每次使用后清理尘盒，每周进行深度保养；仅用微湿布擦拭机身，不可泡水；滤网若标注“可水洗”方可清洗，且须完全晾干至少24小时；保养前需断电、关机并取出电池（如可拆卸）；使用原厂或认证配件。
+2026-04-19 00:03:49,536 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有1条消息
+2026-04-19 00:03:49,536 - agent - DEBUG - middleware.py:38 - [log_before_model]HumanMessage | 帮我生成我的使用报告
+2026-04-19 00:03:52,720 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: get_user_id
+2026-04-19 00:03:52,721 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {}
+2026-04-19 00:03:52,721 - agent - INFO - middleware.py:22 - [tool monitor] 工具get_user_id执行成功
+2026-04-19 00:03:52,775 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有3条消息
+2026-04-19 00:03:52,775 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 1009
+2026-04-19 00:03:54,043 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: get_current_month
+2026-04-19 00:03:54,043 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {}
+2026-04-19 00:03:54,044 - agent - INFO - middleware.py:22 - [tool monitor] 工具get_current_month执行成功
+2026-04-19 00:03:54,131 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有5条消息
+2026-04-19 00:03:54,131 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 2025-04
+2026-04-19 00:03:55,854 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: fill_context_for_report
+2026-04-19 00:03:55,854 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {}
+2026-04-19 00:03:55,855 - agent - INFO - middleware.py:22 - [tool monitor] 工具fill_context_for_report执行成功
+2026-04-19 00:03:57,513 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有7条消息
+2026-04-19 00:03:57,514 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | Error invoking tool 'fill_context_for_report' with kwargs {} with error:
+ user_id: Field required
+month: Field required
+ Please fix the error and try again.
+2026-04-19 00:03:59,543 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: fill_context_for_report
+2026-04-19 00:03:59,544 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {'user_id': '1009', 'month': '2025-04'}
+2026-04-19 00:03:59,544 - agent - INFO - middleware.py:22 - [tool monitor] 工具fill_context_for_report执行成功
+2026-04-19 00:03:59,830 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有9条消息
+2026-04-19 00:03:59,831 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | fill_context_for_report以调用
+2026-04-19 00:04:01,512 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: fetch_external_data
+2026-04-19 00:04:01,512 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {'user_id': '1009', 'month': '2025-04'}
+2026-04-19 00:04:01,514 - agent - INFO - middleware.py:22 - [tool monitor] 工具fetch_external_data执行成功
+2026-04-19 00:04:02,562 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有11条消息
+2026-04-19 00:04:02,563 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | {"特征": "80m两居|养宠|仿实木", "效率": "宠物毛发清理:86% 自动回充成功率:92%", "耗材": "胶刷缠绕:中度 滤网更换:剩余15天", "对比": "养宠家庭中效"}
+2026-04-19 00:04:04,253 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: rag_summarize
+2026-04-19 00:04:04,254 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {'query': '养宠家庭扫地机器人保养建议'}
+2026-04-19 00:04:07,922 - agent - INFO - middleware.py:22 - [tool monitor] 工具rag_summarize执行成功
+2026-04-19 00:04:09,229 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有13条消息
+2026-04-19 00:04:09,229 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 养宠家庭使用扫地机器人后，每次需倒空尘盒、清理主刷和边刷上缠绕的宠物毛发；每周进行深度保养，包括清洁传感器、检查充电触点，并确保使用原厂配件。滤网仅在标注“可水洗”时方可水洗，且必须完全晾干至少24小时后再使用。机身不可泡水，仅可用微湿布擦拭。

@@ -1,0 +1,26 @@
+2026-04-18 23:54:13,303 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有1条消息
+2026-04-18 23:54:13,303 - agent - DEBUG - middleware.py:38 - [log_before_model]HumanMessage | hello?
+2026-04-18 23:54:46,311 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有1条消息
+2026-04-18 23:54:46,312 - agent - DEBUG - middleware.py:38 - [log_before_model]HumanMessage | 根据我所在城市，推荐一个扫地机器人
+2026-04-18 23:54:49,752 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: get_user_loction
+2026-04-18 23:54:49,753 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {}
+2026-04-18 23:54:49,753 - agent - INFO - middleware.py:22 - [tool monitor] 工具get_user_loction执行成功
+2026-04-18 23:54:49,756 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有3条消息
+2026-04-18 23:54:49,756 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 西安
+2026-04-18 23:54:53,113 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: get_weather
+2026-04-18 23:54:53,113 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {'city': '西安'}
+2026-04-18 23:54:53,113 - agent - INFO - middleware.py:22 - [tool monitor] 工具get_weather执行成功
+2026-04-18 23:54:53,116 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有5条消息
+2026-04-18 23:54:53,116 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 城市西安的天气是晴天，温度是20度，湿度是50%
+2026-04-18 23:54:58,473 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: rag_summarize
+2026-04-18 23:54:58,473 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {'query': '适合干燥多尘环境的扫地机器人推荐'}
+2026-04-18 23:55:01,051 - agent - INFO - middleware.py:22 - [tool monitor] 工具rag_summarize执行成功
+2026-04-18 23:55:01,052 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有7条消息
+2026-04-18 23:55:01,053 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 适合干燥多尘环境的扫地机器人推荐选择主流品牌如科沃斯、石头、追觅、米家、iRobot、云鲸等，预算建议1500-3000元，此价位段功能齐全、性价比高。
+2026-04-18 23:55:29,005 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有1条消息
+2026-04-18 23:55:29,005 - agent - DEBUG - middleware.py:38 - [log_before_model]HumanMessage | 我在哪个城市？
+2026-04-18 23:55:30,882 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: get_user_loction
+2026-04-18 23:55:30,883 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {}
+2026-04-18 23:55:30,883 - agent - INFO - middleware.py:22 - [tool monitor] 工具get_user_loction执行成功
+2026-04-18 23:55:30,885 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有3条消息
+2026-04-18 23:55:30,886 - agent - DEBUG - middleware.py:38 - [log_before_model]ToolMessage | 西安

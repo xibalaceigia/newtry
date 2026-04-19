@@ -1,0 +1,5 @@
+2026-04-18 22:56:19,453 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有1条消息
+2026-04-18 22:56:19,453 - agent - DEBUG - middleware.py:38 - [log_before_model]HumanMessage | 扫地机器人在我所在地区的气温下如何保养
+2026-04-18 22:56:22,927 - agent - INFO - middleware.py:18 - [tool monitor] 执行工具: get_user_loction
+2026-04-18 22:56:22,927 - agent - INFO - middleware.py:19 - [tool monitor] 传入参数: {}
+2026-04-18 22:56:22,927 - agent - ERROR - middleware.py:29 - [tool monitor] 工具get_user_loction执行失败: 'builtin_function_or_method' object has no attribute 'choice'

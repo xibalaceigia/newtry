@@ -1,0 +1,2 @@
+2026-04-18 22:49:46,382 - agent - INFO - middleware.py:37 - [log_before_model] 即将调用模型，带有{len(state['messages'])}条消息
+2026-04-18 22:49:46,382 - agent - DEBUG - middleware.py:38 - [log_before_model]{type(state['messages'][-1]).__name__} | {state['messages'][-1].content.strip()}
