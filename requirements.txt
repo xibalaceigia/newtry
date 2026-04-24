@@ -1,0 +1,24 @@
+# 智扫通 - 与 README 同级；建议 Python 3.11+
+
+# Web 界面
+streamlit==1.56.0
+
+# 配置
+PyYAML==6.0.3
+
+# LangChain / Agent / Graph
+langchain==1.2.15
+langchain-core==1.2.23
+langchain-community==0.4.1
+langchain-chroma==1.1.0
+langchain-text-splitters==1.1.1
+langgraph==1.1.6
+
+# 向量库
+chromadb==1.5.7
+
+# 阿里云通义（ChatTongyi、DashScopeEmbeddings 运行时依赖，非 pip 会提示安装）
+dashscope==1.25.16
+
+# PyPDFLoader（utils/file_handler）
+pypdf==6.10.2

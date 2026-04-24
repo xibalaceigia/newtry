@@ -67,7 +67,7 @@ def generate_external_data():
             raise FileNotFoundError(f"外部数据文件不存在: {external_data_path}")
         with open(external_data_path, "r", encoding="utf-8") as f:
             for line in f.readlines()[1:]:
-                arr: list[str] = line.strip().split(",")
+                arr: list[str] = line.strip().split(",")#strip() 的作用是去除字符串 line 首尾的空白字符（包括空格、换行符 \n、回车符 \r、制表符 \t 等）
                 user_id: str = arr[0].replace('"', "")
                 feature: str = arr[1].replace('"', "")
                 efficiency: str = arr[2].replace('"', "")
@@ -99,4 +99,4 @@ def fetch_external_data(user_id: str, month: str) -> str:
 
 @tool(description="无入参，无返回值，调用后触发中间件自动为报告生成的场景动态注入上下文信息，为后续提示词切换提供上下文信息")
 def fill_context_for_report(user_id: str, month: str) -> str:
-    return f"fill_context_for_report以调用"
+    return f"fill_context_for_report已调用"

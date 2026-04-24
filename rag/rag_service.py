@@ -27,8 +27,9 @@ class RagSummaryService(object):
     def retriver_docs(self,query:str) -> list[Document]:
         return self.retriever.invoke(query)
 
-    def rag_summarize(self, query:str) -> str:
-        context_docs = self.retriver_docs(query)
+    def rag_summarize(self, query:str) -> str:  #用户提问交给检索器，检索完chroma返回参考资料，之后把参考资料给模型，返回模型的回答。
+        #这个回答是一个基于问题的参考资料的总结，最终目的也是为了给下一次输入准备参考资料总结
+        context_docs = self.retriver_docs(query)    #这是检索器拿到的参考资料
 
         context = ""
         counter = 0

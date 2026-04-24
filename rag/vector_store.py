@@ -71,7 +71,7 @@ class VectorStoreService:
             if check_md5_hex(md5_hex):
                 logger.info(f"文件{path}已处理过，跳过")
                 continue
-            try:
+            try:#这里没错，是list[Document]，因为text_loader / pdf_loader 本身返回的就是列表
                 documents: list[Document] = get_file_document(path)
 
                 if not documents:
@@ -100,4 +100,4 @@ if __name__ == "__main__":
     res = retriver.invoke("迷路")
     for r in res:
         print(r.page_content)
-        print("-"*20)
+        print("="*20)

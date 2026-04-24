@@ -20,11 +20,11 @@ def monitor_tool(
     try:
         result = handler(request)
         logger.info(f"[tool monitor] 工具{request.tool_call['name']}执行成功")
-
-        if request.tool_call['name'] == "fill_context_for_report":
-            request.runtime.context["report"] = True
+        """这里这样操作是因为prompts\main_prompt.txt里面第16行的规定"""
+        if request.tool_call['name'] == "fill_context_for_report":#只要调用的工具名字是fill_context_for_report
+            request.runtime.context["report"] = True#fill_context_for_report工具的执行结果为True，则将报告生成场景设置为True
             return result
-        return result
+        return result#工具名字不是fill_context_for_report，则直接返回结果
     except Exception as e:
         logger.error(f"[tool monitor] 工具{request.tool_call['name']}执行失败: {e}")
         raise e
@@ -38,10 +38,10 @@ def log_brfore_model(
     logger.debug(f"[log_before_model]{type(state['messages'][-1]).__name__} | {state['messages'][-1].content.strip()}")
     return None
 
-@dynamic_prompt     #每一次再生成提示词之前，调用此函数
+@dynamic_prompt     #每一次在生成提示词之前，调用此函数
 def report_prompt_switch(request: ModelRequest):     #动态切换提示词
-    is_report = request.runtime.context.get("report", False)
-    if is_report:           #是报告生成场景，返回报告生成提示词内容
+    is_report = request.runtime.context.get("report", False)#get是字典里的一个方法，用来获取字典里的值，这里默认值False
+    if is_report:           #是报告生成场景，返回报告生成提示词内容，跟上面monitor_tool函数中的if语句对应
         return load_report_prompt()
                             #不是报告生成场景，返回系统提示词内容
     return load_system_prompt()
