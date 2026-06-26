@@ -37,4 +37,5 @@ if prompt:
                     yield char
 
         st.chat_message("assistant").write(capture(res_stream, response_messages))
-        st.session_state.messages.append({"role": "assistant", "content": response_messages[-1]})
+        final_content = response_messages[-1] if response_messages else "抱歉，我暂时无法回答这个问题。"
+        st.session_state.messages.append({"role": "assistant", "content": final_content})

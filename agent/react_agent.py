@@ -1,7 +1,7 @@
 from langchain.agents import create_agent
 from model.factory import chat_model
 from utils.prompt_loader import load_system_prompt
-from agent.tools.agent_tools import rag_summarize, get_weather, get_user_loction, get_user_id, get_current_month, fetch_external_data, fill_context_for_report
+from agent.tools.agent_tools import rag_summarize, get_weather, get_user_location, get_user_id, get_current_month, fetch_external_data, fill_context_for_report
 from agent.tools.middleware import log_brfore_model, report_prompt_switch, monitor_tool
 
 
@@ -10,7 +10,7 @@ class ReactAgent:
         self.agent = create_agent(
             model = chat_model,
             system_prompt = load_system_prompt(),
-            tools = [rag_summarize, get_weather, get_user_loction, get_user_id, get_current_month, fetch_external_data, fill_context_for_report],
+            tools = [rag_summarize, get_weather, get_user_location, get_user_id, get_current_month, fetch_external_data, fill_context_for_report],
             middleware = [log_brfore_model, report_prompt_switch, monitor_tool],
         )
 

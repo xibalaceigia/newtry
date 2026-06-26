@@ -36,11 +36,12 @@ class VectorStoreService:
         要计算md5值并去重
         """
         def check_md5_hex(md5_for_check:str):
-            if not os.path.exists(chroma_conf["md5_hex_store"]):
-                open(chroma_conf["md5_hex_store"], "w", encoding="utf-8").close()
+            md5_store_path = get_abs_path(chroma_conf["md5_hex_store"])
+            if not os.path.exists(md5_store_path):
+                open(md5_store_path, "w", encoding="utf-8").close()
                 return False#没处理过
 
-            with open(chroma_conf["md5_hex_store"], "r", encoding="utf-8") as f:
+            with open(md5_store_path, "r", encoding="utf-8") as f:
                 for line in f.readlines():
                     if line.strip() == md5_for_check:
                         return True#已处理过
@@ -88,7 +89,7 @@ class VectorStoreService:
                 logger.info(f"文件{path}加载成功，处理完成")
             except Exception as e:
                 #exc_info = True记录详细报错堆栈，False仅记录报错信息本身
-                logger.error(f"文件{path}处理失败: {str(e)}, exc_info = True")
+                logger.error(f"文件{path}处理失败: {str(e)}", exc_info=True)
                 continue
 
 

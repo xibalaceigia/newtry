@@ -27,7 +27,7 @@ def get_weather(city: str) -> str:
 
 
 @tool(description="获取用户所在城市的名称，以纯字符串的形式返回")
-def get_user_loction() -> str:
+def get_user_location() -> str:
     return random.choice(["深圳", "广州", "北京", "上海", "成都", "重庆", "杭州", "南京", "武汉", "西安"])
 
 
@@ -98,5 +98,5 @@ def fetch_external_data(user_id: str, month: str) -> str:
 
 
 @tool(description="无入参，无返回值，调用后触发中间件自动为报告生成的场景动态注入上下文信息，为后续提示词切换提供上下文信息")
-def fill_context_for_report(user_id: str, month: str) -> str:
+def fill_context_for_report() -> str:
     return f"fill_context_for_report已调用"
